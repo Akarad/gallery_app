@@ -1,6 +1,6 @@
 // Import express package
 const express = require('express');
-cost router = express.Router();
+const router = express.Router();
 const upload = require('./upload');
 
 router.get('/', (req,res)=>{
