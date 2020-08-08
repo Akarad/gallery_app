@@ -19,6 +19,6 @@ app.use('/', indexRouter);
 // Define the port number
 const PORT = 5000;
 
-app.listen(PORT, ()=>{
+app.listen(PORT, function()=>{
    console.log(`Server is listening on port ${PORT}`)
 })
