@@ -2,23 +2,21 @@
 // Import express package
 const express = require('express');
 
-let indexRouter = require('./routes/index');
-
 // Initialize express
 const app = express();
-
-// Set up a view engine
-app.set('view engine', 'ejs');
 
 // Set a static folder
 app.use(express.static('public'));
 
-// Define the index router
-app.use('/', indexRouter);
+
+// route for the index page
+app.get('/', (req, res)=>{
+   response.send('<h1> Welcome to my app</h1>')
+});
 
 // Define the port number
-const PORT = 5000;
+const PORT = 8000;
 
-app.listen(PORT, function()=>{
+app.listen(PORT, ()=>{
    console.log(`Server is listening on port ${PORT}`)
 })
