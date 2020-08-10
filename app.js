@@ -1,6 +1,7 @@
 
 // Import express package
 const express = require('express');
+const upload = require('./upload');
 
 // Initialize express
 const app = express();
