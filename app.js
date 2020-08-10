@@ -24,8 +24,7 @@ app.post('/upload', (req,res)=>{
            console.log(err)
            res.render('index', {msg: err})
        }else{
-           console.log(req.file)
-           res.send('test');
+         res.render('index', {file: 'images/' + req.file.filename})
        }
    })
 })
