@@ -6,8 +6,7 @@ const express = require('express');
 const app = express();
 
 // Set a static folder
-app.use(static('public'));
-
+app.use(express.static('public'));
 
 // route for the index page
 app.get('/', (req, res)=>{
@@ -15,7 +14,7 @@ app.get('/', (req, res)=>{
 });
 
 // Define the port number
-const PORT = 8000;
+const PORT = 5000;
 
 app.listen(PORT, ()=>{
    console.log(`Server is listening on port ${PORT}`)
