@@ -12,9 +12,9 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 // route for the index page
-app.get('/', (req, res)=>{
-   response.send('<h1> Welcome to my app</h1>')
-});
+app.get('/', (req,res)=>{
+   res.render('index');
+})
 
 // Define the port number
 const PORT = 5000;
