@@ -5,6 +5,9 @@ const express = require('express');
 // Initialize express
 const app = express();
 
+// Set up a view engine
+app.set('view engine', 'ejs');
+
 // Set a static folder
 app.use(express.static('public'));
 
