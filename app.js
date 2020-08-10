@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 
 // Set a static folder
-app.use(express.static('public'));
+app.use(static('public'));
 
 
 // route for the index page
