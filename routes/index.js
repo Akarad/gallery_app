@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const upload = require('../upload');
 
+// route for the index page
 router.get('/', (req,res)=>{
     res.render('index');
  })
