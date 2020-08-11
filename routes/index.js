@@ -4,11 +4,18 @@ const router = express.Router();
 const upload = require('../upload');
 const Photo = require('../models/photo');
 
-// route for the index page
+// Home page router
 router.get('/', (req,res)=>{
-    res.render('index', {msg: req.query.msg});
+    Photo.find({}, (error, images)=>{
+        if (error){
+            console.log(error);
+        }else{
+ 
+            res.render('index', { images:images, msg: req.query.msg});
+        }
+    })
  })
-
+ 
  // route to handle image upload
 router.post('/upload', (req,res)=>{
     upload(req, res, (err)=>{

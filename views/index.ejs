@@ -49,6 +49,15 @@
        <!-- Upload form end  -->
        <hr>
        <br>
+       <div class="row">
+        <% images.forEach(function(image){ %>
+
+          <div class="column">
+
+            <img src="<%= image.path %>" class="responsive-img" alt="<%= image.name %>">
+          </div>
+        <% }); %> 
+      </div>
        <% if (typeof file !== 'undefined'){ %>
           <img src="<%= file %>" class="responsive-img" >
        <% } else {%>
