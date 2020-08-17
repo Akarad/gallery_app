@@ -11,6 +11,6 @@ var PhotoSchema = new Schema({
 });
 
 // convert the schema into a Model
-let Photo = mongoose.model('Photo', imageSchema);
+let Photo = mongoose.model('Photo', PhotoSchema);
 
 module.exports = Photo;
