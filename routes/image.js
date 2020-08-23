@@ -14,4 +14,11 @@ router.get('/:id', (req,res)=>{
    })
 })
 
+// route to handle put request
+router.put('/:id', (req,res)=>{
+    console.log(req.params.id)
+    console.log(req.body)
+ 
+ })
+
 module.exports = router;
