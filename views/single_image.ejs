@@ -53,25 +53,25 @@
                <div class="card-action">
                 <a class="waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons left">update</i>Update Image Information</a>
                 <!-- Modal Body -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Update Image Information: </h4>
-      <div class="col s6">
-        <form action="/image/<%= image._id %>" data-id="<%= image.id %>"> 
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="_id" type="text" value="<%= image.name %>">
-              <label for="image_title">Image Name</label>
-            </div>
-            <div class="input-field col s12">
-              <button type="submit" class="waves-effect waves-light btn-large">Update</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div> 
-  <!-- Modal End -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Update Image Information: </h4>
+                    <div class="col s6">
+                      <form action="/image/<%= image._id %>" data-id="<%= image.id %>"> 
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input id="_id" type="text" value="<%= %>">
+                            <label for="image_title">Image Name</label>
+                          </div>
+                          <div class="input-field col s12">
+                            <button type="submit" class="waves-effect waves-light btn-large">Update</button>
+                          </div>
+                        </div>
+                     </form>
+                  </div>
+                </div>
+              </div> 
+            <!-- Modal End -->
               </div>
              </div>
            </div>
