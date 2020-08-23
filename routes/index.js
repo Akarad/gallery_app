@@ -6,7 +6,14 @@ const Photo = require('../models/photos');
 
 // Home page router
 router.get('/', (req,res)=>{
-    res.render('index', {msg: req.query.msg});
+    Photo.find({}, (error, images)=>{
+        if (error){
+            console.log(error);
+        }else{
+ 
+            res.render('index', { images:images, msg: req.query.msg});
+        }
+    })
  })
  
  // route to handle image upload
