@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Photo = require('../models/photo');
+const Photo = require('../models/photos');
 
 router.get('/:id', (req,res)=>{
   
