@@ -16,9 +16,20 @@ router.get('/:id', (req,res)=>{
 
 // route to handle put request
 router.put('/:id', (req,res)=>{
-    console.log(req.params.id)
-    console.log(req.body)
- })
+    
+    Photo.updateOne({_id: req.params.id}, {
+        $set: {
+            name: req.body.name
+        }
+    },{upsert:true}, (err, image)=>{
+        if (err){
+            console.log(err)
+        }else{
+            res.redirect('/')
+        }
+    })
+
+})
 
  // Delete route
 router.delete('/:id', (req,res)=>{
