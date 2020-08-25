@@ -8,7 +8,10 @@ let imageRouter = require('./routes/image');
 // Connecting to the Database
 let mongodb_url = 'mongodb://localhost/';
 let dbName = 'darkroom';
-mongoose.connect(mongodb_url + dbName,)
+
+// Define a url to connect to the database
+const MONGODB_URI = process.env.MONGODB_URI || mongodb_url + dbName
+mongoose.connect(MONGODB_URI)
 let db = mongoose.connection;
 
 // Check Connection
@@ -38,7 +41,7 @@ app.use('/', indexRouter);
 app.use('/image', imageRouter);
 
 // Define the port number
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, ()=>{
    console.log(`Server is listening on port ${PORT}`)
