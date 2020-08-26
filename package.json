@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/Akarad/gallery_app/issues"
   },
+  "engines": {
+    "node": "14.x"
+  }, 
   "homepage": "https://github.com/Akarad/gallery_app#readme",
   "dependencies": {
     "ejs": "^3.1.3",
